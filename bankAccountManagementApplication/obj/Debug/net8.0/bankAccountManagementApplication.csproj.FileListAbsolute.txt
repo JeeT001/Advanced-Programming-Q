@@ -1,0 +1,15 @@
+C:\Users\20220613\Desktop\RepoFolder\Advanced-Programming-Q\bankAccountManagementApplication\bin\Debug\net8.0\bankAccountManagementApplication.exe
+C:\Users\20220613\Desktop\RepoFolder\Advanced-Programming-Q\bankAccountManagementApplication\bin\Debug\net8.0\bankAccountManagementApplication.deps.json
+C:\Users\20220613\Desktop\RepoFolder\Advanced-Programming-Q\bankAccountManagementApplication\bin\Debug\net8.0\bankAccountManagementApplication.runtimeconfig.json
+C:\Users\20220613\Desktop\RepoFolder\Advanced-Programming-Q\bankAccountManagementApplication\bin\Debug\net8.0\bankAccountManagementApplication.dll
+C:\Users\20220613\Desktop\RepoFolder\Advanced-Programming-Q\bankAccountManagementApplication\bin\Debug\net8.0\bankAccountManagementApplication.pdb
+C:\Users\20220613\Desktop\RepoFolder\Advanced-Programming-Q\bankAccountManagementApplication\obj\Debug\net8.0\bankAccountManagementApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\20220613\Desktop\RepoFolder\Advanced-Programming-Q\bankAccountManagementApplication\obj\Debug\net8.0\bankAccountManagementApplication.AssemblyInfoInputs.cache
+C:\Users\20220613\Desktop\RepoFolder\Advanced-Programming-Q\bankAccountManagementApplication\obj\Debug\net8.0\bankAccountManagementApplication.AssemblyInfo.cs
+C:\Users\20220613\Desktop\RepoFolder\Advanced-Programming-Q\bankAccountManagementApplication\obj\Debug\net8.0\bankAccountManagementApplication.csproj.CoreCompileInputs.cache
+C:\Users\20220613\Desktop\RepoFolder\Advanced-Programming-Q\bankAccountManagementApplication\obj\Debug\net8.0\bankAccountManagementApplication.sourcelink.json
+C:\Users\20220613\Desktop\RepoFolder\Advanced-Programming-Q\bankAccountManagementApplication\obj\Debug\net8.0\bankAccountManagementApplication.dll
+C:\Users\20220613\Desktop\RepoFolder\Advanced-Programming-Q\bankAccountManagementApplication\obj\Debug\net8.0\refint\bankAccountManagementApplication.dll
+C:\Users\20220613\Desktop\RepoFolder\Advanced-Programming-Q\bankAccountManagementApplication\obj\Debug\net8.0\bankAccountManagementApplication.pdb
+C:\Users\20220613\Desktop\RepoFolder\Advanced-Programming-Q\bankAccountManagementApplication\obj\Debug\net8.0\bankAccountManagementApplication.genruntimeconfig.cache
+C:\Users\20220613\Desktop\RepoFolder\Advanced-Programming-Q\bankAccountManagementApplication\obj\Debug\net8.0\ref\bankAccountManagementApplication.dll
