@@ -52,13 +52,30 @@
 
         public void deposit()
         {
-            //need implementation
-            Console.WriteLine("money added to account");
+            //simple implementation by converting the readline string to double and then updating the account balance.
+            Console.WriteLine("How much money you want to deposit?");
+            string input = Console.ReadLine();
+            double value;
+
+            double.TryParse(input, out value);
+
+            accountBalance += value;
+
+            Console.WriteLine($"Your Account balance now is {accountBalance}");
         }
 
         public void withdraw()
-        {   //need implementation
-            Console.WriteLine("money withdraw");
+        {  
+            //copy and pasted the deposite method with little changes as minus instead of plus and some words.
+            Console.WriteLine("How much money you want to withdraw?");
+            string input = Console.ReadLine();
+            double value;
+
+            double.TryParse(input, out value);
+
+            accountBalance -= value;
+
+            Console.WriteLine($"Your Account balance now is {accountBalance}");
         }
 
         public void getAccountInfo()
@@ -86,6 +103,8 @@
             Account account = new Account(2, 100.222, 4, 1000.2, 1000.1);
 
             account.getAccountInfo();
+            account.deposit();
+            account.withdraw();
         }
     }
 }
