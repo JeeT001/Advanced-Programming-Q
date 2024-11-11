@@ -1,0 +1,10 @@
+C:\Users\Jeet\Desktop\assignment\Advanced-Programming-Q\BankAccountManagementApp\BankAccountManagementApp\bin\Debug\BankAccountManagementApp.exe.config
+C:\Users\Jeet\Desktop\assignment\Advanced-Programming-Q\BankAccountManagementApp\BankAccountManagementApp\bin\Debug\BankAccountManagementApp.exe
+C:\Users\Jeet\Desktop\assignment\Advanced-Programming-Q\BankAccountManagementApp\BankAccountManagementApp\bin\Debug\BankAccountManagementApp.pdb
+C:\Users\Jeet\Desktop\assignment\Advanced-Programming-Q\BankAccountManagementApp\BankAccountManagementApp\obj\Debug\BankAccountManagementApp.csproj.AssemblyReference.cache
+C:\Users\Jeet\Desktop\assignment\Advanced-Programming-Q\BankAccountManagementApp\BankAccountManagementApp\obj\Debug\BankAccountManagementApp.MainForm.resources
+C:\Users\Jeet\Desktop\assignment\Advanced-Programming-Q\BankAccountManagementApp\BankAccountManagementApp\obj\Debug\BankAccountManagementApp.Properties.Resources.resources
+C:\Users\Jeet\Desktop\assignment\Advanced-Programming-Q\BankAccountManagementApp\BankAccountManagementApp\obj\Debug\BankAccountManagementApp.csproj.GenerateResource.cache
+C:\Users\Jeet\Desktop\assignment\Advanced-Programming-Q\BankAccountManagementApp\BankAccountManagementApp\obj\Debug\BankAccountManagementApp.csproj.CoreCompileInputs.cache
+C:\Users\Jeet\Desktop\assignment\Advanced-Programming-Q\BankAccountManagementApp\BankAccountManagementApp\obj\Debug\BankAccountManagementApp.exe
+C:\Users\Jeet\Desktop\assignment\Advanced-Programming-Q\BankAccountManagementApp\BankAccountManagementApp\obj\Debug\BankAccountManagementApp.pdb

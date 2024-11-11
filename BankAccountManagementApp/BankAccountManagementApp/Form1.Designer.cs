@@ -42,7 +42,7 @@
             // accountTypeComboBox
             // 
             this.accountTypeComboBox.FormattingEnabled = true;
-            this.accountTypeComboBox.Location = new System.Drawing.Point(248, 110);
+            this.accountTypeComboBox.Location = new System.Drawing.Point(149, 121);
             this.accountTypeComboBox.Name = "accountTypeComboBox";
             this.accountTypeComboBox.Size = new System.Drawing.Size(138, 21);
             this.accountTypeComboBox.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             // amountTextBox
             // 
-            this.amountTextBox.Location = new System.Drawing.Point(248, 197);
+            this.amountTextBox.Location = new System.Drawing.Point(149, 203);
             this.amountTextBox.Name = "amountTextBox";
             this.amountTextBox.Size = new System.Drawing.Size(100, 20);
             this.amountTextBox.TabIndex = 1;
@@ -59,71 +59,79 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(248, 71);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(146, 75);
+            this.label1.MaximumSize = new System.Drawing.Size(0, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.Size = new System.Drawing.Size(376, 24);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Account Type";
+            this.label1.Text = "Bank Account Management Application";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(248, 161);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(146, 170);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(58, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Amount";
             // 
             // viewInfoButton
             // 
-            this.viewInfoButton.Location = new System.Drawing.Point(75, 258);
+            this.viewInfoButton.Location = new System.Drawing.Point(149, 245);
             this.viewInfoButton.Name = "viewInfoButton";
             this.viewInfoButton.Size = new System.Drawing.Size(75, 23);
             this.viewInfoButton.TabIndex = 4;
             this.viewInfoButton.Text = "View Info";
             this.viewInfoButton.UseVisualStyleBackColor = true;
+            this.viewInfoButton.Click += new System.EventHandler(this.viewInfoButton_Click);
             // 
             // depositButton
             // 
-            this.depositButton.Location = new System.Drawing.Point(196, 258);
+            this.depositButton.Location = new System.Drawing.Point(230, 245);
             this.depositButton.Name = "depositButton";
             this.depositButton.Size = new System.Drawing.Size(75, 23);
             this.depositButton.TabIndex = 5;
             this.depositButton.Text = "Deposit";
             this.depositButton.UseVisualStyleBackColor = true;
+            this.depositButton.Click += new System.EventHandler(this.depositButton_Click);
             // 
             // withdrawButton
             // 
-            this.withdrawButton.Location = new System.Drawing.Point(322, 258);
+            this.withdrawButton.Location = new System.Drawing.Point(311, 245);
             this.withdrawButton.Name = "withdrawButton";
             this.withdrawButton.Size = new System.Drawing.Size(75, 23);
             this.withdrawButton.TabIndex = 6;
             this.withdrawButton.Text = "Withdraw";
             this.withdrawButton.UseVisualStyleBackColor = true;
+            this.withdrawButton.Click += new System.EventHandler(this.withdrawButton_Click_1);
             // 
             // calculateInterestButton
             // 
-            this.calculateInterestButton.Location = new System.Drawing.Point(429, 258);
+            this.calculateInterestButton.Location = new System.Drawing.Point(392, 245);
             this.calculateInterestButton.Name = "calculateInterestButton";
             this.calculateInterestButton.Size = new System.Drawing.Size(108, 23);
             this.calculateInterestButton.TabIndex = 7;
             this.calculateInterestButton.Text = "Calculate Interest";
             this.calculateInterestButton.UseVisualStyleBackColor = true;
+            this.calculateInterestButton.Click += new System.EventHandler(this.calculateInterestButton_Click);
             // 
             // transactionListBox
             // 
             this.transactionListBox.FormattingEnabled = true;
-            this.transactionListBox.Location = new System.Drawing.Point(251, 313);
+            this.transactionListBox.Location = new System.Drawing.Point(149, 297);
             this.transactionListBox.Name = "transactionListBox";
-            this.transactionListBox.Size = new System.Drawing.Size(120, 95);
+            this.transactionListBox.Size = new System.Drawing.Size(359, 95);
             this.transactionListBox.TabIndex = 8;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 460);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(676, 462);
             this.Controls.Add(this.transactionListBox);
             this.Controls.Add(this.calculateInterestButton);
             this.Controls.Add(this.withdrawButton);
