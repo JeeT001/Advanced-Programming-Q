@@ -18,3 +18,13 @@ C:\Users\Simra\OneDrive\Desktop\CustomerManagementSystem\obj\Debug\CustomerManag
 C:\Users\Simra\OneDrive\Desktop\CustomerManagementSystem\obj\Debug\CustomerManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\Simra\OneDrive\Desktop\CustomerManagementSystem\obj\Debug\CustomerManagementSystem.exe
 C:\Users\Simra\OneDrive\Desktop\CustomerManagementSystem\obj\Debug\CustomerManagementSystem.pdb
+C:\Users\Simra\OneDrive\Desktop\Advanced-Programming-Q\CustomerManagementSystem\bin\Debug\CustomerManagementSystem.exe.config
+C:\Users\Simra\OneDrive\Desktop\Advanced-Programming-Q\CustomerManagementSystem\bin\Debug\CustomerManagementSystem.exe
+C:\Users\Simra\OneDrive\Desktop\Advanced-Programming-Q\CustomerManagementSystem\bin\Debug\CustomerManagementSystem.pdb
+C:\Users\Simra\OneDrive\Desktop\Advanced-Programming-Q\CustomerManagementSystem\obj\Debug\CustomerManagementSystem.csproj.AssemblyReference.cache
+C:\Users\Simra\OneDrive\Desktop\Advanced-Programming-Q\CustomerManagementSystem\obj\Debug\CustomerManagementSystem.Form1.resources
+C:\Users\Simra\OneDrive\Desktop\Advanced-Programming-Q\CustomerManagementSystem\obj\Debug\CustomerManagementSystem.Properties.Resources.resources
+C:\Users\Simra\OneDrive\Desktop\Advanced-Programming-Q\CustomerManagementSystem\obj\Debug\CustomerManagementSystem.csproj.GenerateResource.cache
+C:\Users\Simra\OneDrive\Desktop\Advanced-Programming-Q\CustomerManagementSystem\obj\Debug\CustomerManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\Simra\OneDrive\Desktop\Advanced-Programming-Q\CustomerManagementSystem\obj\Debug\CustomerManagementSystem.exe
+C:\Users\Simra\OneDrive\Desktop\Advanced-Programming-Q\CustomerManagementSystem\obj\Debug\CustomerManagementSystem.pdb
