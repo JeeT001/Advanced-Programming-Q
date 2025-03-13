@@ -26,19 +26,19 @@ namespace BankAccountManagementApp
             }
         }
 
-        // Overriding the withdraw method for no overdraft rule and fee for failed transactions
-        public new void withdraw(double value)
+
+        public override void withdraw(double value)
         {
-            if (accountBalance - value >= 0)
+            if (accountBalance >= value)
             {
                 accountBalance -= value;
-                Console.WriteLine($"Your Account balance is now {accountBalance}");
+                Console.WriteLine($"Withdrawal successful. New balance: {accountBalance}");
             }
             else
             {
-                accountBalance -= feeForFailedTransaction;
-                Console.WriteLine($"Insufficient funds. A fee of {feeForFailedTransaction} is incurred for a failed transaction. Updated balance {accountBalance}");
+                throw new WithdrawalException($"Investment Account {accountId}: Insufficient funds. No overdraft allowed.");
             }
         }
+
     }
 }

@@ -40,18 +40,17 @@ namespace BankAccountManagementApp
             Console.WriteLine($"Your Account balance now is {accountBalance}");
         }
 
-        public bool withdraw(double input)
+
+        public virtual void withdraw(double input)
         {
-            if (accountBalance >= input)  // Check if there are sufficient funds
+            if (accountBalance >= input)
             {
-                accountBalance -= input;  // Deduct the amount
+                accountBalance -= input;
                 Console.WriteLine($"Withdrawal successful. New balance: {accountBalance}");
-                return true;  // Indicate success
             }
             else
             {
-                Console.WriteLine("Withdrawal failed. Insufficient funds.");
-                return false;  // Indicate failure due to insufficient funds
+                throw new WithdrawalException($"Account {accountId}: Insufficient funds.");
             }
         }
 
