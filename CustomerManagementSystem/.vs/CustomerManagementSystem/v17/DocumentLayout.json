@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Simra\\OneDrive\\Desktop\\Advanced-Programming-Q\\CustomerManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3BEA6283-5628-48FE-A3CF-320FCBEF43CF}|CustomerManagementSystem.csproj|C:\\Users\\Simra\\OneDrive\\Desktop\\Advanced-Programming-Q\\CustomerManagementSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3BEA6283-5628-48FE-A3CF-320FCBEF43CF}|CustomerManagementSystem.csproj|c:\\users\\simra\\onedrive\\desktop\\advanced-programming-q\\customermanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3BEA6283-5628-48FE-A3CF-320FCBEF43CF}|CustomerManagementSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BEA6283-5628-48FE-A3CF-320FCBEF43CF}|CustomerManagementSystem.csproj|c:\\users\\simra\\onedrive\\desktop\\advanced-programming-q\\customermanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3BEA6283-5628-48FE-A3CF-320FCBEF43CF}|CustomerManagementSystem.csproj|C:\\Users\\Simra\\OneDrive\\Desktop\\Advanced-Programming-Q\\CustomerManagementSystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BEA6283-5628-48FE-A3CF-320FCBEF43CF}|CustomerManagementSystem.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -30,23 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 325,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Simra\\OneDrive\\Desktop\\Advanced-Programming-Q\\CustomerManagementSystem\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Simra\\OneDrive\\Desktop\\Advanced-Programming-Q\\CustomerManagementSystem\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T22:06:18.535Z"
             },
             {
               "$type": "Document",
@@ -59,6 +47,30 @@
               "ViewState": "AgIAABYAAAAAAAAAAAAgwCoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T22:06:18.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Simra\\OneDrive\\Desktop\\Advanced-Programming-Q\\CustomerManagementSystem\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Simra\\OneDrive\\Desktop\\Advanced-Programming-Q\\CustomerManagementSystem\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T22:06:19.154Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Simra\\OneDrive\\Desktop\\Advanced-Programming-Q\\CustomerManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Simra\\OneDrive\\Desktop\\Advanced-Programming-Q\\CustomerManagementSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T22:06:18.535Z"
             },
             {
               "$type": "Document",
@@ -84,18 +96,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T22:06:18.636Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Simra\\OneDrive\\Desktop\\Advanced-Programming-Q\\CustomerManagementSystem\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Simra\\OneDrive\\Desktop\\Advanced-Programming-Q\\CustomerManagementSystem\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T22:06:19.154Z",
-              "EditorCaption": " [Design]"
             }
           ]
         },
