@@ -30,15 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 325,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
@@ -84,11 +80,7 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\Simra\\OneDrive\\Desktop\\Advanced-Programming-Q\\CustomerManagementSystem\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-<<<<<<< HEAD
-              "ViewState": "AgIAADQAAAAAAAAAAAAcwEMAAAAeAAAAAAAAAA==",
-=======
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAeAAAAAAAAAA==",
->>>>>>> assignment2
+              "ViewState": "AgIAAGIAAAAAAAAAAAAAwEMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T22:06:18.636Z",
               "EditorCaption": ""
