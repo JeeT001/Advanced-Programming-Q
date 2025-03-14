@@ -110,7 +110,36 @@ namespace BankAccountManagementApp
         }
 
         // Withdraw Button Click
-       
+
+
+        //private void withdrawButton_Click_1(object sender, EventArgs e)
+        //{
+        //    var account = GetSelectedAccount();
+        //    if (account != null)
+        //    {
+        //        if (double.TryParse(amountTextBox.Text, out double amount))
+        //        {
+        //            bool success = account.withdraw(amount);  // Update withdraw method to take amount as parameter
+        //            if (success)
+        //            {
+        //                transactionListBox.Items.Add($"Withdrew ${amount}. New balance: {account.AccountBalance}");
+        //            }
+        //            else
+        //            {
+        //                transactionListBox.Items.Add("Failed transaction. Insufficient funds or overdraft limit reached.");
+        //            }
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Invalid amount. Please enter a valid number.");
+        //        }
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Please select an account type.");
+        //    }
+
+        //}
 
         private void withdrawButton_Click_1(object sender, EventArgs e)
         {
@@ -119,14 +148,18 @@ namespace BankAccountManagementApp
             {
                 if (double.TryParse(amountTextBox.Text, out double amount))
                 {
-                    bool success = account.withdraw(amount);  // Update withdraw method to take amount as parameter
-                    if (success)
+                    try
                     {
+                        account.withdraw(amount);  // No need to check success as it now throws an exception
                         transactionListBox.Items.Add($"Withdrew ${amount}. New balance: {account.AccountBalance}");
                     }
-                    else
+                    catch (WithdrawalException ex) // Catch the custom exception
                     {
-                        transactionListBox.Items.Add("Failed transaction. Insufficient funds or overdraft limit reached.");
+                        transactionListBox.Items.Add(ex.Message);
+                    }
+                    catch (Exception ex) // Catch any other unexpected errors
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
                     }
                 }
                 else
@@ -138,8 +171,8 @@ namespace BankAccountManagementApp
             {
                 MessageBox.Show("Please select an account type.");
             }
-
         }
+
 
         //Calculate interest button
         private void calculateInterestButton_Click(object sender, EventArgs e)

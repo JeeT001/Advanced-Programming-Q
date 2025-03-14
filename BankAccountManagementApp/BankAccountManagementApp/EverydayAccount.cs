@@ -18,8 +18,23 @@ namespace BankAccountManagementApp
             Console.WriteLine("Everyday Account Info:");
             base.getAccountInfo(); // Display common account info
         }
+        public override void withdraw(double value)
+        {
+            if (accountBalance >= value)
+            {
+                accountBalance -= value;
+                Console.WriteLine($"Withdrawal successful. New balance: {accountBalance}");
+            }
+            else
+            {
+                throw new WithdrawalException($"Everyday Account {accountId}: Insufficient funds.");
+            }
+        }
+
 
 
 
     }
+
+
 }

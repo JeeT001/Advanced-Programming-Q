@@ -29,5 +29,19 @@ namespace BankAccountManagementApp
             Console.WriteLine("Omni account information:");
             base.getAccountInfo(); // Calling base method to display common account info
         }
+
+        public override void withdraw(double value)
+        {
+            if (accountBalance - value >= -overDraftLimit)
+            {
+                accountBalance -= value;
+                Console.WriteLine($"Omni Account {accountId}: Withdrawal successful. Updated balance: {accountBalance}");
+            }
+            else
+            {
+                throw new WithdrawalException($"Omni Account {accountId}: Overdraft limit exceeded. Withdrawal denied.");
+            }
+        }
+
     }
 }
