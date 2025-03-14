@@ -8,7 +8,7 @@ namespace BankAccountManagementApp
 {
     public abstract class Account
     {
-        protected int accountId { get; set; }
+        public int accountId { get; set; }
         protected double accountBalance { get; set; }
         protected double interestRate { get; set; }
         protected double overDraftLimit { get; set; }
