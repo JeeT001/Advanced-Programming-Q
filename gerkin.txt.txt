@@ -1,0 +1,37 @@
+Feature: Intra-account transfers
+
+  As a customer
+  I want to transfer money between my accounts
+  So that I can manage my funds more effectively
+
+  Background:
+    Given I am logged into my online banking
+    And I have two accounts: "Everyday" and "Savings"
+
+  Scenario: Successful transfer from Everyday to Savings
+    Given my Everyday account has a balance of $1000
+    And my Savings account has a balance of $500
+    When I transfer $200 from Everyday to Savings
+    Then the Everyday account balance should be $800
+    And the Savings account balance should be $700
+
+  Scenario: Failed transfer due to insufficient balance
+    Given my Everyday account has a balance of $100
+    When I try to transfer $200 from Everyday to Savings
+    Then the transfer should be declined
+    And my Everyday account balance should remain $100
+    And my Savings account balance should remain unchanged
+
+  Scenario Outline: Transfer with fee adjustment for staff
+    Given <user> is a <role>
+    And their account "Everyday" has $1000
+    And their account "Savings" has $500
+    When they transfer $200 from "Everyday" to "Savings"
+    Then the "Everyday" account should be debited by <expected_debit>
+    And the "Savings" account should increase by $200
+
+    Examples:
+      | user        | role      | expected_debit |
+      | John Smith  | customer  | 202.00         |
+      | Jane Admin  | staff     | 200.00         |
+
