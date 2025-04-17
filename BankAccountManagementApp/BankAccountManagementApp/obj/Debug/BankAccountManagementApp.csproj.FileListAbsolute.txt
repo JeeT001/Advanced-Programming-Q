@@ -29,3 +29,4 @@ C:\Users\Simra\OneDrive\Desktop\Ad_Assignment3\Advanced-Programming-Q\BankAccoun
 C:\Users\Simra\OneDrive\Desktop\Ad_Assignment3\Advanced-Programming-Q\BankAccountManagementApp\BankAccountManagementApp\bin\Debug\BankAccountManagementApp.exe
 C:\Users\Simra\OneDrive\Desktop\Ad_Assignment3\Advanced-Programming-Q\BankAccountManagementApp\BankAccountManagementApp\bin\Debug\BankAccountManagementApp.pdb
 C:\Users\Simra\OneDrive\Desktop\Ad_Assignment3\Advanced-Programming-Q\BankAccountManagementApp\BankAccountManagementApp\obj\Debug\BankAccountManagementApp.MainForm.resources
+C:\Users\Simra\OneDrive\Desktop\Ad_Assignment3\Advanced-Programming-Q\BankAccountManagementApp\BankAccountManagementApp\obj\Debug\BankAccountManagementApp.CustomerForm.resources

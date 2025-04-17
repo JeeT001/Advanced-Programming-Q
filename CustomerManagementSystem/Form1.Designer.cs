@@ -96,6 +96,7 @@
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.Size = new System.Drawing.Size(100, 20);
             this.txtCustomerID.TabIndex = 5;
+            this.txtCustomerID.TextChanged += new System.EventHandler(this.txtCustomerID_TextChanged);
             // 
             // label2
             // 
@@ -124,6 +125,7 @@
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(100, 20);
             this.txtCustomerName.TabIndex = 8;
+            this.txtCustomerName.TextChanged += new System.EventHandler(this.txtCustomerName_TextChanged);
             // 
             // lstCustomers
             // 
@@ -132,6 +134,7 @@
             this.lstCustomers.Name = "lstCustomers";
             this.lstCustomers.Size = new System.Drawing.Size(196, 199);
             this.lstCustomers.TabIndex = 9;
+            this.lstCustomers.SelectedIndexChanged += new System.EventHandler(this.lstCustomers_SelectedIndexChanged);
             // 
             // Form1
             // 

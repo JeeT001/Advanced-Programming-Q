@@ -8,38 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CustomerManagementSystem
+namespace BankAccountManagementApp
 {
-    //This form is actually a view from the mvc
-    public partial class Form1 : Form
+    public partial class CustomerForm : Form
     {
         private CustomerController controller;
-        public Form1()
+        public CustomerForm()
         {
-            // importing and creating instance of controller
             InitializeComponent();
             controller = new CustomerController();
-
         }
 
-        
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void ClearInputs()
         {
-
-        }
-        // accidently created these two methods, if I remove them build does not work so please just ignore
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            txtCustomerID.Clear();
+            txtCustomerName.Clear();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        // adding button method
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
             try
@@ -55,17 +45,6 @@ namespace CustomerManagementSystem
                 MessageBox.Show($"Error: {ex.Message}");
             }
         }
-
-
-
-        // Helper method to clear input fields
-        private void ClearInputs()
-        {
-            txtCustomerID.Clear();
-            txtCustomerName.Clear();
-        }
-
-        //update button method
 
         private void btnUpdateCustomer_Click(object sender, EventArgs e)
         {
@@ -83,7 +62,6 @@ namespace CustomerManagementSystem
             }
         }
 
-        //customer button method
         private void btnDeleteCustomer_Click(object sender, EventArgs e)
         {
             try
@@ -99,7 +77,6 @@ namespace CustomerManagementSystem
             }
         }
 
-        // view button method
         private void btnViewAllCustomers_Click(object sender, EventArgs e)
         {
             try
@@ -115,21 +92,6 @@ namespace CustomerManagementSystem
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
-        }
-
-        private void txtCustomerID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCustomerName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lstCustomers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

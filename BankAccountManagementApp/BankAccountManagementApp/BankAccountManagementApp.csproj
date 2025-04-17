@@ -47,6 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerController.cs" />
+    <Compile Include="CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EverydayAccount.cs" />
     <Compile Include="BankAccountManagementForm.cs">
       <SubType>Form</SubType>
@@ -68,6 +76,9 @@
     <Compile Include="WithdrawalException.cs" />
     <EmbeddedResource Include="BankAccountManagementForm.resx">
       <DependentUpon>BankAccountManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
