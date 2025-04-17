@@ -1,6 +1,6 @@
 ﻿namespace BankAccountManagementApp
 {
-    partial class MainForm
+    partial class BankAccountManagementForm
     {
         /// <summary>
         /// Required designer variable.
@@ -143,6 +143,7 @@
             this.Controls.Add(this.accountTypeComboBox);
             this.Name = "MainForm";
             this.Text = "Bank Account Management";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

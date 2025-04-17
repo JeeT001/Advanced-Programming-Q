@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace BankAccountManagementApp
 {
-    public partial class MainForm : Form
+    public partial class BankAccountManagementForm : Form
     {
 
         private User user;
@@ -15,7 +15,7 @@ namespace BankAccountManagementApp
 
 
         //initializing 
-        public MainForm()
+        public BankAccountManagementForm()
         {
             InitializeComponent();
             InitializeGUI();
@@ -194,6 +194,11 @@ namespace BankAccountManagementApp
             {
                 MessageBox.Show("Interest calculation is not available for this account type.");
             }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
