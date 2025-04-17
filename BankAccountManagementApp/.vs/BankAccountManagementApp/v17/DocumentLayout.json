@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Simra\\OneDrive\\Desktop\\Ad_Assignment3\\Advanced-Programming-Q\\BankAccountManagementApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1BEA030A-804C-415A-AC84-587DB7D52070}|BankAccountManagementApp\\BankAccountManagementApp.csproj|C:\\Users\\Simra\\OneDrive\\Desktop\\Ad_Assignment3\\Advanced-Programming-Q\\BankAccountManagementApp\\bankaccountmanagementapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1BEA030A-804C-415A-AC84-587DB7D52070}|BankAccountManagementApp\\BankAccountManagementApp.csproj|c:\\users\\simra\\onedrive\\desktop\\ad_assignment3\\advanced-programming-q\\bankaccountmanagementapp\\bankaccountmanagementapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BEA030A-804C-415A-AC84-587DB7D52070}|BankAccountManagementApp\\BankAccountManagementApp.csproj|solutionrelative:bankaccountmanagementapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{1BEA030A-804C-415A-AC84-587DB7D52070}|BankAccountManagementApp\\BankAccountManagementApp.csproj|solutionrelative:bankaccountmanagementapp\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BEA030A-804C-415A-AC84-587DB7D52070}|BankAccountManagementApp\\BankAccountManagementApp.csproj|c:\\users\\simra\\onedrive\\desktop\\ad_assignment3\\advanced-programming-q\\bankaccountmanagementapp\\bankaccountmanagementapp\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1BEA030A-804C-415A-AC84-587DB7D52070}|BankAccountManagementApp\\BankAccountManagementApp.csproj|C:\\Users\\Simra\\OneDrive\\Desktop\\Ad_Assignment3\\Advanced-Programming-Q\\BankAccountManagementApp\\bankaccountmanagementapp\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BEA030A-804C-415A-AC84-587DB7D52070}|BankAccountManagementApp\\BankAccountManagementApp.csproj|solutionrelative:bankaccountmanagementapp\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -69,24 +69,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "C:\\Users\\Simra\\OneDrive\\Desktop\\Ad_Assignment3\\Advanced-Programming-Q\\BankAccountManagementApp\\BankAccountManagementApp\\CustomerController.cs",
-              "RelativeDocumentMoniker": "BankAccountManagementApp\\CustomerController.cs",
-              "ToolTip": "C:\\Users\\Simra\\OneDrive\\Desktop\\Ad_Assignment3\\Advanced-Programming-Q\\BankAccountManagementApp\\BankAccountManagementApp\\CustomerController.cs",
-              "RelativeToolTip": "BankAccountManagementApp\\CustomerController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAwDEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T01:48:50.189Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -98,8 +85,7 @@
               "RelativeToolTip": "BankAccountManagementApp\\CustomerForm.cs",
               "ViewState": "AgIAAEQAAAAAAAAAAAAkwGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T02:02:03.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T02:02:03.979Z"
             },
             {
               "$type": "Document",
@@ -110,8 +96,7 @@
               "ToolTip": "C:\\Users\\Simra\\OneDrive\\Desktop\\Ad_Assignment3\\Advanced-Programming-Q\\BankAccountManagementApp\\BankAccountManagementApp\\BankAccountManagementForm.cs [Design]",
               "RelativeToolTip": "BankAccountManagementApp\\BankAccountManagementForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T23:33:36.455Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-16T23:33:36.455Z"
             },
             {
               "$type": "Document",
@@ -123,8 +108,7 @@
               "RelativeToolTip": "BankAccountManagementApp\\BankAccountManagementForm.cs",
               "ViewState": "AgIAALAAAAAAAAAAAAAYwMwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T23:33:37.788Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T23:33:37.788Z"
             },
             {
               "$type": "Document",
@@ -136,8 +120,7 @@
               "RelativeToolTip": "BankAccountManagementApp\\Customer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T01:48:14.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T01:48:14.514Z"
             },
             {
               "$type": "Document",
@@ -148,8 +131,7 @@
               "ToolTip": "C:\\Users\\Simra\\OneDrive\\Desktop\\Ad_Assignment3\\Advanced-Programming-Q\\BankAccountManagementApp\\BankAccountManagementApp\\CustomerForm.cs [Design]",
               "RelativeToolTip": "BankAccountManagementApp\\CustomerForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T01:49:47.294Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-17T01:49:47.294Z"
             },
             {
               "$type": "Document",
@@ -161,8 +143,7 @@
               "RelativeToolTip": "BankAccountManagementApp\\InvestmentAccount.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAkwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T23:32:33.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T23:32:33.782Z"
             },
             {
               "$type": "Document",
@@ -172,10 +153,22 @@
               "RelativeDocumentMoniker": "BankAccountManagementApp\\Program.cs",
               "ToolTip": "C:\\Users\\Simra\\OneDrive\\Desktop\\Ad_Assignment3\\Advanced-Programming-Q\\BankAccountManagementApp\\BankAccountManagementApp\\Program.cs",
               "RelativeToolTip": "BankAccountManagementApp\\Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T23:38:53.196Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\Simra\\OneDrive\\Desktop\\Ad_Assignment3\\Advanced-Programming-Q\\BankAccountManagementApp\\BankAccountManagementApp\\CustomerController.cs",
+              "RelativeDocumentMoniker": "BankAccountManagementApp\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\Simra\\OneDrive\\Desktop\\Ad_Assignment3\\Advanced-Programming-Q\\BankAccountManagementApp\\BankAccountManagementApp\\CustomerController.cs",
+              "RelativeToolTip": "BankAccountManagementApp\\CustomerController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T01:48:50.189Z"
             },
             {
               "$type": "Document",
@@ -187,8 +180,7 @@
               "RelativeToolTip": "BankAccountManagementApp\\BankAccountManagementForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T23:40:45.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T23:40:45.353Z"
             },
             {
               "$type": "Document",
@@ -200,8 +192,7 @@
               "RelativeToolTip": "BankAccountManagementApp\\Account.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAYwEQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T23:17:43.071Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T23:17:43.071Z"
             },
             {
               "$type": "Document",
@@ -213,8 +204,7 @@
               "RelativeToolTip": "BankAccountManagementApp\\CustomerForm.Designer.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T01:57:43.64Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T01:57:43.64Z"
             },
             {
               "$type": "Document",
