@@ -37,6 +37,7 @@
             this.withdrawButton = new System.Windows.Forms.Button();
             this.calculateInterestButton = new System.Windows.Forms.Button();
             this.transactionListBox = new System.Windows.Forms.ListBox();
+            this.customerComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // accountTypeComboBox
@@ -126,12 +127,21 @@
             this.transactionListBox.Size = new System.Drawing.Size(359, 95);
             this.transactionListBox.TabIndex = 8;
             // 
-            // MainForm
+            // customerComboBox
+            // 
+            this.customerComboBox.FormattingEnabled = true;
+            this.customerComboBox.Location = new System.Drawing.Point(311, 121);
+            this.customerComboBox.Name = "customerComboBox";
+            this.customerComboBox.Size = new System.Drawing.Size(121, 21);
+            this.customerComboBox.TabIndex = 9;
+            // 
+            // BankAccountManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(676, 462);
+            this.Controls.Add(this.customerComboBox);
             this.Controls.Add(this.transactionListBox);
             this.Controls.Add(this.calculateInterestButton);
             this.Controls.Add(this.withdrawButton);
@@ -141,7 +151,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.amountTextBox);
             this.Controls.Add(this.accountTypeComboBox);
-            this.Name = "MainForm";
+            this.Name = "BankAccountManagementForm";
             this.Text = "Bank Account Management";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
@@ -160,6 +170,7 @@
         private System.Windows.Forms.Button withdrawButton;
         private System.Windows.Forms.Button calculateInterestButton;
         private System.Windows.Forms.ListBox transactionListBox;
+        private System.Windows.Forms.ComboBox customerComboBox;
     }
 }
 

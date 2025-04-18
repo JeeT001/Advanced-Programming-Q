@@ -13,10 +13,11 @@ namespace BankAccountManagementApp
     public partial class CustomerForm : Form
     {
         private CustomerController controller;
-        public CustomerForm()
+
+        public CustomerForm(CustomerController controller)
         {
             InitializeComponent();
-            controller = new CustomerController();
+            this.controller = controller;
         }
 
         private void ClearInputs()
@@ -92,6 +93,11 @@ namespace BankAccountManagementApp
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
+        }
+
+        private void CustomerForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

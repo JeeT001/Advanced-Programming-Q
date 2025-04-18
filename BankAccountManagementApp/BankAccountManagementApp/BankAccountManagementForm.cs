@@ -1,10 +1,15 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BankAccountManagementApp
 {
     public partial class BankAccountManagementForm : Form
     {
+        //private CustomerController customerController = new CustomerController();
+        private CustomerController customerController;
+
+
 
         private User user;
 
@@ -13,11 +18,15 @@ namespace BankAccountManagementApp
         private InvestmentAccount investmentAccount = new InvestmentAccount(2, 5000.0, 3.0, 20.0);
         private OmniAccount omniAccount = new OmniAccount(3, 1200.0, 1.5, 500.0, 25.0);
 
+        
+        private Customer currentCustomer;
+
 
         //initializing 
-        public BankAccountManagementForm()
+        public BankAccountManagementForm(CustomerController controller)
         {
             InitializeComponent();
+            customerController = controller;
             InitializeGUI();
             InitializeUser();
         }
@@ -26,6 +35,8 @@ namespace BankAccountManagementApp
 
         private void InitializeGUI()
         {
+
+
             accountTypeComboBox.Items.Add("Everyday Account");
             accountTypeComboBox.Items.Add("Investment Account");
             accountTypeComboBox.Items.Add("Omni Account");
@@ -35,30 +46,65 @@ namespace BankAccountManagementApp
 
         private void InitializeUser()
         {
-            // Hardcoding the user
-            user = new User("John Doe");
+            customerController.AddCustomer(1, "John Doe");
+            customerController.AddAccountToCustomer(1, new EverydayAccount(1, 500.0));
+            customerController.AddAccountToCustomer(1, new InvestmentAccount(2, 5000.0, 3.0, 20.0));
+            customerController.AddAccountToCustomer(1, new OmniAccount(3, 1200.0, 1.5, 500.0, 25.0));
 
-            // Adding accounts to the user
-            user.AddAccount(everydayAccount);
-            user.AddAccount(investmentAccount);
-            user.AddAccount(omniAccount);
+            // Set current customer
+            currentCustomer = customerController.GetCustomerById(1);
+            PopulateCustomerComboBox();
+            PopulateAccountComboBox();
         }
 
-        // Method to get selected account based on combo box selection
+        private void PopulateAccountComboBox()
+        {
+            accountTypeComboBox.Items.Clear();
+            if (currentCustomer != null)
+            {
+                foreach (var account in currentCustomer.Accounts)
+                {
+                    accountTypeComboBox.Items.Add($"{account.GetType().Name} (ID: {account.accountId})");
+                }
+            }
+
+            accountTypeComboBox.SelectedIndex = 0; // optional default selection
+        }
+
         private Account GetSelectedAccount()
         {
-            switch (accountTypeComboBox.SelectedItem?.ToString())
+            if (currentCustomer == null || accountTypeComboBox.SelectedIndex == -1)
+                return null;
+
+            string selectedText = accountTypeComboBox.SelectedItem.ToString();
+            int idStart = selectedText.IndexOf("ID: ") + 4;
+            int idEnd = selectedText.IndexOf(")", idStart);
+            string idString = selectedText.Substring(idStart, idEnd - idStart);
+
+            if (int.TryParse(idString, out int selectedAccountId))
             {
-                case "Everyday Account":
-                    return everydayAccount;
-                case "Investment Account":
-                    return investmentAccount;
-                case "Omni Account":
-                    return omniAccount;
-                default:
-                    return null;
+                return currentCustomer.Accounts.FirstOrDefault(a => a.accountId == selectedAccountId);
             }
+
+            return null;
         }
+
+
+        // Method to get selected account based on combo box selection
+        //private Account GetSelectedAccount()
+        //{
+        //    switch (accountTypeComboBox.SelectedItem?.ToString())
+        //    {
+        //        case "Everyday Account":
+        //            return everydayAccount;
+        //        case "Investment Account":
+        //            return investmentAccount;
+        //        case "Omni Account":
+        //            return omniAccount;
+        //        default:
+        //            return null;
+        //    }
+        //}
 
         //Created by no will, If I remove these, it give me ton of errors
         private void label1_Click(object sender, EventArgs e)
@@ -173,6 +219,24 @@ namespace BankAccountManagementApp
             }
         }
 
+        private void PopulateCustomerComboBox()
+        {
+            customerComboBox.Items.Clear();
+            foreach (var customer in customerController.GetAllCustomers())
+            {
+                customerComboBox.Items.Add(customer.CustomerName);
+            }
+            customerComboBox.SelectedIndex = 0;
+        }
+
+        private void customerComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedName = customerComboBox.SelectedItem.ToString();
+            currentCustomer = customerController.GetCustomerByName(selectedName);
+            PopulateAccountComboBox();
+        }
+
+
 
         //Calculate interest button
         private void calculateInterestButton_Click(object sender, EventArgs e)
@@ -195,6 +259,7 @@ namespace BankAccountManagementApp
                 MessageBox.Show("Interest calculation is not available for this account type.");
             }
         }
+
 
         private void MainForm_Load(object sender, EventArgs e)
         {

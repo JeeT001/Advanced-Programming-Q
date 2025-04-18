@@ -12,6 +12,8 @@ namespace BankAccountManagementApp
         public int CustomerID { get; set; }
         public string CustomerName { get; set; }
 
+        public List<Account> Accounts { get; set; }
+
         public Customer(int id, string name)
         {
             if (string.IsNullOrWhiteSpace(name))
@@ -19,6 +21,16 @@ namespace BankAccountManagementApp
 
             CustomerID = id;
             CustomerName = name;
+            Accounts = new List<Account>();
+        }
+        public void AddAccount(Account account)
+        {
+            Accounts.Add(account);
+        }
+
+        public Account GetAccountByType(string accountType)
+        {
+            return Accounts.FirstOrDefault(a => a.GetType().Name == accountType);
         }
     }
 }
