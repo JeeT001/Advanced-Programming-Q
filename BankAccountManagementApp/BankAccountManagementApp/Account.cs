@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankAccountManagementApp
 {
@@ -18,9 +14,9 @@ namespace BankAccountManagementApp
         public double AccountBalance
         {
             get { return accountBalance; }
-
         }
-        //creating constructor 
+
+        // Constructor
         public Account(int id, double balance, double interest, double overDraftL, double fee)
         {
             accountId = id;
@@ -30,23 +26,18 @@ namespace BankAccountManagementApp
             feeForFailedTransaction = fee;
         }
 
+        // Deposit method
         public void deposit(double input)
         {
-            
-            Console.WriteLine("How much money you want to deposit?");
-
             accountBalance += input;
-
-            Console.WriteLine($"Your Account balance now is {accountBalance}");
         }
 
-
+        // Withdraw method
         public virtual void withdraw(double input)
         {
             if (accountBalance >= input)
             {
                 accountBalance -= input;
-                Console.WriteLine($"Withdrawal successful. New balance: {accountBalance}");
             }
             else
             {
@@ -54,15 +45,16 @@ namespace BankAccountManagementApp
             }
         }
 
-
-        public void getAccountInfo()
+        // Updated getAccountInfo to return a string
+        public virtual string getAccountInfo()
         {
-            Console.WriteLine("Account Info: ");
-            Console.WriteLine($"ID: {accountId}");
-            Console.WriteLine($"Account Balance: {accountBalance}");
-            Console.WriteLine($"Interest Rate: {interestRate}");
-            Console.WriteLine($"Over Draft Limit: {overDraftLimit}");
-            Console.WriteLine($"Fee For Failed Transaction: {feeForFailedTransaction}");
+            // Return the account details as a formatted string
+            return $"Account Info:\n" +
+                   $"ID: {accountId}\n" +
+                   $"Balance: {accountBalance}\n" +
+                   $"Interest Rate: {interestRate}%\n" +
+                   $"Overdraft Limit: {overDraftLimit}\n" +
+                   $"Fee for Failed Transaction: {feeForFailedTransaction}";
         }
     }
 }

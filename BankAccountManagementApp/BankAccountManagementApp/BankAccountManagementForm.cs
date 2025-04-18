@@ -120,12 +120,33 @@ namespace BankAccountManagementApp
         //Account info button
         private void viewInfoButton_Click(object sender, EventArgs e)
         {
+            // Ensure a customer is selected
+            if (currentCustomer == null)
+            {
+                MessageBox.Show("Please select a customer.");
+                return;
+            }
+
+            // Ensure an account is selected
             var account = GetSelectedAccount();
             if (account != null)
             {
-                transactionListBox.Items.Add("Viewing Account Info:");
-                account.getAccountInfo();  // Calls the account's getAccountInfo() method
-                transactionListBox.Items.Add($"Balance: {account.AccountBalance}");
+                // Clear previous info (optional)
+                transactionListBox.Items.Clear();
+
+                // Show customer and account info
+                transactionListBox.Items.Add($"--- Account Info ---");
+                transactionListBox.Items.Add($"Customer: {currentCustomer.CustomerName}");
+                transactionListBox.Items.Add($"Account Type: {account.GetType().Name}");
+                transactionListBox.Items.Add($"Account ID: {account.accountId}");
+                transactionListBox.Items.Add($"Balance: ${account.AccountBalance}");
+
+                // Add more details manually since getAccountInfo() writes to console
+                transactionListBox.Items.Add($"Interest Rate: {account.GetType().GetProperty("interestRate", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.GetValue(account)}");
+                transactionListBox.Items.Add($"Overdraft Limit: {account.GetType().GetProperty("overDraftLimit", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.GetValue(account)}");
+                transactionListBox.Items.Add($"Fee for Failed Transaction: {account.GetType().GetProperty("feeForFailedTransaction", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.GetValue(account)}");
+
+                transactionListBox.Items.Add("--------------------------------------------");
             }
             else
             {
@@ -264,6 +285,83 @@ namespace BankAccountManagementApp
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (double.TryParse(transferAmountTextBox.Text, out double amount))
+            {
+                string from = fromAccountComboBox.SelectedItem.ToString().Split(' ')[0]; // Assume "Everyday Account"
+                string to = toAccountComboBox.SelectedItem.ToString().Split(' ')[0];
+
+                bool result = customerController.TransferBetweenAccounts(currentCustomer.CustomerID, from, to, amount);
+
+                if (result)
+                {
+                    transactionListBox.Items.Add($"Transferred ${amount} from {from} to {to}");
+                }
+                else
+                {
+                    transactionListBox.Items.Add("Transfer failed: Insufficient funds including fee.");
+                }
+
+                PopulateAccountComboBox(); // Refresh balances
+            }
+            else
+            {
+                MessageBox.Show("Enter a valid transfer amount.");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (customerComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a customer.");
+                return;
+            }
+
+            string selectedCustomerName = customerComboBox.SelectedItem.ToString();
+            Customer customer = customerController.GetCustomerByName(selectedCustomerName);
+
+            if (customer == null)
+            {
+                MessageBox.Show("Customer not found.");
+                return;
+            }
+
+            string accountType = accountTypeComboBox.SelectedItem?.ToString();
+            if (!double.TryParse(amountTextBox.Text, out double balance))
+            {
+                MessageBox.Show("Enter a valid initial balance.");
+                return;
+            }
+
+            // Generate a new account ID
+            int newAccountId = customer.Accounts.Count > 0
+                ? customer.Accounts.Max(a => a.accountId) + 1
+                : 1;
+
+            Account newAccount = null;
+
+            if (accountType.Contains("Everyday"))
+                newAccount = new EverydayAccount(newAccountId, balance);
+            else if (accountType.Contains("Investment"))
+                newAccount = new InvestmentAccount(newAccountId, balance, 3.0, 20.0);
+            else if (accountType.Contains("Omni"))
+                newAccount = new OmniAccount(newAccountId, balance, 1.5, 500.0, 25.0);
+            else
+            {
+                MessageBox.Show("Please select a valid account type.");
+                return;
+            }
+
+            customerController.AddAccountToCustomer(customer.CustomerID, newAccount);
+            MessageBox.Show($"{accountType} created for {customer.CustomerName} with ${balance}.");
+
+            if (currentCustomer?.CustomerID == customer.CustomerID)
+                PopulateAccountComboBox();  // Refresh account list if this is the current customer
         }
     }
 }

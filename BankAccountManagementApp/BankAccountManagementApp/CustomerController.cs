@@ -21,13 +21,37 @@ namespace BankAccountManagementApp
         private List<Customer> customers = new List<Customer>();
 
         // Add Customer
-        public void AddCustomer(int id, string name)
+        public void AddCustomer(int id, string name, string role = "customer")
         {
             if (customers.Any(c => c.CustomerID == id))
                 throw new InvalidOperationException("Customer ID already exists");
 
-            customers.Add(new Customer(id, name));
+            customers.Add(new Customer(id, name, role));
         }
+
+        public bool TransferBetweenAccounts(int customerId, string fromAccountType, string toAccountType, double amount)
+        {
+            var customer = GetCustomerById(customerId);
+
+            var fromAccount = customer.GetAccountByType(fromAccountType);
+            var toAccount = customer.GetAccountByType(toAccountType);
+
+            if (fromAccount == null || toAccount == null)
+                throw new InvalidOperationException("Invalid account type selected.");
+
+            double fee = customer.Role == "staff" ? 0.0 : 2.0; // Flat fee for non-staff
+
+            if (fromAccount.AccountBalance >= amount + fee)
+            {
+                fromAccount.withdraw(amount + fee);
+                toAccount.deposit(amount);
+                return true;
+            }
+
+            return false;
+        }
+
+
 
         // Update Customer
         public void UpdateCustomer(int id, string newName)
