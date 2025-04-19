@@ -83,11 +83,26 @@ namespace BankAccountManagementApp
         }
 
         // Add account to a customer
+        //public void AddAccountToCustomer(int customerId, Account account)
+        //{
+        //    var customer = GetCustomerById(customerId);
+        //    customer.AddAccount(account);
+        //}
+
+        // Add account to a customer with duplicate checks
         public void AddAccountToCustomer(int customerId, Account account)
         {
             var customer = GetCustomerById(customerId);
+
+            string accountType = account.GetType().Name;
+
+            if (customer.Accounts.Any(a => a.GetType().Name == accountType))
+                throw new InvalidOperationException($"Customer already has a {accountType}.");
+
             customer.AddAccount(account);
         }
+
+
         // Get customer by name
         public Customer GetCustomerByName(string name)
         {

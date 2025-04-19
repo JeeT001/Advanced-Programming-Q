@@ -14,6 +14,7 @@ namespace BankAccountManagementApp
         public string Role { get; set; } // Add this
         public List<Account> Accounts { get; set; }
 
+
         public Customer(int id, string name, string role = "customer")
         {
             if (string.IsNullOrWhiteSpace(name))
@@ -23,6 +24,7 @@ namespace BankAccountManagementApp
             CustomerName = name;
             Role = role;
             Accounts = new List<Account>();
+
         }
 
         public void AddAccount(Account account) => Accounts.Add(account);

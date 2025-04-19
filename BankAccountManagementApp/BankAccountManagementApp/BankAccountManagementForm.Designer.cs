@@ -38,10 +38,6 @@
             this.calculateInterestButton = new System.Windows.Forms.Button();
             this.transactionListBox = new System.Windows.Forms.ListBox();
             this.customerComboBox = new System.Windows.Forms.ComboBox();
-            this.fromAccountComboBox = new System.Windows.Forms.ComboBox();
-            this.toAccountComboBox = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.transferAmountTextBox = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -56,7 +52,7 @@
             // 
             // amountTextBox
             // 
-            this.amountTextBox.Location = new System.Drawing.Point(149, 258);
+            this.amountTextBox.Location = new System.Drawing.Point(150, 198);
             this.amountTextBox.Name = "amountTextBox";
             this.amountTextBox.Size = new System.Drawing.Size(100, 20);
             this.amountTextBox.TabIndex = 1;
@@ -78,7 +74,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(146, 225);
+            this.label2.Location = new System.Drawing.Point(147, 170);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 16);
             this.label2.TabIndex = 3;
@@ -86,7 +82,7 @@
             // 
             // viewInfoButton
             // 
-            this.viewInfoButton.Location = new System.Drawing.Point(149, 300);
+            this.viewInfoButton.Location = new System.Drawing.Point(150, 228);
             this.viewInfoButton.Name = "viewInfoButton";
             this.viewInfoButton.Size = new System.Drawing.Size(75, 23);
             this.viewInfoButton.TabIndex = 4;
@@ -96,7 +92,7 @@
             // 
             // depositButton
             // 
-            this.depositButton.Location = new System.Drawing.Point(230, 300);
+            this.depositButton.Location = new System.Drawing.Point(231, 228);
             this.depositButton.Name = "depositButton";
             this.depositButton.Size = new System.Drawing.Size(75, 23);
             this.depositButton.TabIndex = 5;
@@ -106,7 +102,7 @@
             // 
             // withdrawButton
             // 
-            this.withdrawButton.Location = new System.Drawing.Point(311, 300);
+            this.withdrawButton.Location = new System.Drawing.Point(312, 228);
             this.withdrawButton.Name = "withdrawButton";
             this.withdrawButton.Size = new System.Drawing.Size(75, 23);
             this.withdrawButton.TabIndex = 6;
@@ -116,7 +112,7 @@
             // 
             // calculateInterestButton
             // 
-            this.calculateInterestButton.Location = new System.Drawing.Point(392, 300);
+            this.calculateInterestButton.Location = new System.Drawing.Point(393, 228);
             this.calculateInterestButton.Name = "calculateInterestButton";
             this.calculateInterestButton.Size = new System.Drawing.Size(108, 23);
             this.calculateInterestButton.TabIndex = 7;
@@ -127,7 +123,7 @@
             // transactionListBox
             // 
             this.transactionListBox.FormattingEnabled = true;
-            this.transactionListBox.Location = new System.Drawing.Point(149, 352);
+            this.transactionListBox.Location = new System.Drawing.Point(150, 280);
             this.transactionListBox.Name = "transactionListBox";
             this.transactionListBox.Size = new System.Drawing.Size(359, 95);
             this.transactionListBox.TabIndex = 8;
@@ -141,46 +137,13 @@
             this.customerComboBox.TabIndex = 9;
             this.customerComboBox.SelectedIndexChanged += new System.EventHandler(this.customerComboBox_SelectedIndexChanged_1);
             // 
-            // fromAccountComboBox
-            // 
-            this.fromAccountComboBox.FormattingEnabled = true;
-            this.fromAccountComboBox.Location = new System.Drawing.Point(150, 162);
-            this.fromAccountComboBox.Name = "fromAccountComboBox";
-            this.fromAccountComboBox.Size = new System.Drawing.Size(121, 21);
-            this.fromAccountComboBox.TabIndex = 10;
-            // 
-            // toAccountComboBox
-            // 
-            this.toAccountComboBox.FormattingEnabled = true;
-            this.toAccountComboBox.Location = new System.Drawing.Point(311, 162);
-            this.toAccountComboBox.Name = "toAccountComboBox";
-            this.toAccountComboBox.Size = new System.Drawing.Size(121, 21);
-            this.toAccountComboBox.TabIndex = 11;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(150, 199);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // transferAmountTextBox
-            // 
-            this.transferAmountTextBox.Location = new System.Drawing.Point(333, 199);
-            this.transferAmountTextBox.Name = "transferAmountTextBox";
-            this.transferAmountTextBox.Size = new System.Drawing.Size(100, 20);
-            this.transferAmountTextBox.TabIndex = 13;
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(461, 121);
+            this.button2.Location = new System.Drawing.Point(447, 119);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 14;
-            this.button2.Text = "button2";
+            this.button2.Text = "Create";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -191,10 +154,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(676, 513);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.transferAmountTextBox);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.toAccountComboBox);
-            this.Controls.Add(this.fromAccountComboBox);
             this.Controls.Add(this.customerComboBox);
             this.Controls.Add(this.transactionListBox);
             this.Controls.Add(this.calculateInterestButton);
@@ -225,10 +184,6 @@
         private System.Windows.Forms.Button calculateInterestButton;
         private System.Windows.Forms.ListBox transactionListBox;
         private System.Windows.Forms.ComboBox customerComboBox;
-        private System.Windows.Forms.ComboBox fromAccountComboBox;
-        private System.Windows.Forms.ComboBox toAccountComboBox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox transferAmountTextBox;
         private System.Windows.Forms.Button button2;
     }
 }
