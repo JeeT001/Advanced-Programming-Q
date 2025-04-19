@@ -39,6 +39,7 @@
             this.transactionListBox = new System.Windows.Forms.ListBox();
             this.customerComboBox = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.openTransferFormButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // accountTypeComboBox
@@ -147,12 +148,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // openTransferFormButton
+            // 
+            this.openTransferFormButton.Location = new System.Drawing.Point(150, 405);
+            this.openTransferFormButton.Name = "openTransferFormButton";
+            this.openTransferFormButton.Size = new System.Drawing.Size(100, 23);
+            this.openTransferFormButton.TabIndex = 15;
+            this.openTransferFormButton.Text = "Money Transfer";
+            this.openTransferFormButton.UseVisualStyleBackColor = true;
+            this.openTransferFormButton.Click += new System.EventHandler(this.openTransferFormButton_Click);
+            // 
             // BankAccountManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(676, 513);
+            this.Controls.Add(this.openTransferFormButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.customerComboBox);
             this.Controls.Add(this.transactionListBox);
@@ -185,6 +197,7 @@
         private System.Windows.Forms.ListBox transactionListBox;
         private System.Windows.Forms.ComboBox customerComboBox;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button openTransferFormButton;
     }
 }
 

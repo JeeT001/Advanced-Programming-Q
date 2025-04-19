@@ -484,5 +484,11 @@ namespace BankAccountManagementApp
             PopulateAccountComboBox();  // Refresh account list for the selected customer
             PopulateAccountTypeComboBoxForCreation();
         }
+
+        private void openTransferFormButton_Click(object sender, EventArgs e)
+        {
+            var transferForm = new AccountTransferForm(customerController);
+            transferForm.ShowDialog();
+        }
     }
 }
