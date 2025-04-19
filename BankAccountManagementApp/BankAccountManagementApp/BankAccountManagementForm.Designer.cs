@@ -139,6 +139,7 @@
             this.customerComboBox.Name = "customerComboBox";
             this.customerComboBox.Size = new System.Drawing.Size(121, 21);
             this.customerComboBox.TabIndex = 9;
+            this.customerComboBox.SelectedIndexChanged += new System.EventHandler(this.customerComboBox_SelectedIndexChanged_1);
             // 
             // fromAccountComboBox
             // 

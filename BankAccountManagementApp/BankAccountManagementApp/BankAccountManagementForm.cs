@@ -42,6 +42,8 @@ namespace BankAccountManagementApp
             accountTypeComboBox.Items.Add("Omni Account");
             transactionListBox.Items.Clear();
             transactionListBox.Items.Add("Select an account and perform actions.");
+            customerComboBox.SelectedIndexChanged += customerComboBox_SelectedIndexChanged;
+
         }
 
         private void InitializeUser()
@@ -52,9 +54,9 @@ namespace BankAccountManagementApp
             customerController.AddAccountToCustomer(1, new OmniAccount(3, 1200.0, 1.5, 500.0, 25.0));
 
             // Set current customer
-            currentCustomer = customerController.GetCustomerById(1);
+           // currentCustomer = customerController.GetCustomerById(1);
             PopulateCustomerComboBox();
-            PopulateAccountComboBox();
+           // PopulateAccountComboBox();
         }
 
         private void PopulateAccountComboBox()
@@ -68,7 +70,7 @@ namespace BankAccountManagementApp
                 }
             }
 
-            accountTypeComboBox.SelectedIndex = 0; // optional default selection
+          //  accountTypeComboBox.SelectedIndex = 0; // optional default selection
         }
 
         private Account GetSelectedAccount()
@@ -118,41 +120,91 @@ namespace BankAccountManagementApp
         }
 
         //Account info button
+        //private void viewInfoButton_Click(object sender, EventArgs e)
+        //{
+        //    // Ensure a customer is selected
+        //    if (currentCustomer == null)
+        //    {
+        //        MessageBox.Show("Please select a customer.");
+        //        return;
+        //    }
+
+        //    // Ensure an account is selected
+        //    var account = GetSelectedAccount();
+        //    if (account != null)
+        //    {
+        //        // Clear previous info (optional)
+        //        transactionListBox.Items.Clear();
+
+        //        // Show customer and account info
+        //        transactionListBox.Items.Add($"--- Account Info ---");
+        //        transactionListBox.Items.Add($"Customer: {currentCustomer.CustomerName}");
+        //        transactionListBox.Items.Add($"Account Type: {account.GetType().Name}");
+        //        transactionListBox.Items.Add($"Account ID: {account.accountId}");
+        //        transactionListBox.Items.Add($"Balance: ${account.AccountBalance}");
+
+        //        // Add more details manually since getAccountInfo() writes to console
+        //        transactionListBox.Items.Add($"Interest Rate: {account.GetType().GetProperty("interestRate", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.GetValue(account)}");
+        //        transactionListBox.Items.Add($"Overdraft Limit: {account.GetType().GetProperty("overDraftLimit", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.GetValue(account)}");
+        //        transactionListBox.Items.Add($"Fee for Failed Transaction: {account.GetType().GetProperty("feeForFailedTransaction", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.GetValue(account)}");
+
+        //        transactionListBox.Items.Add("--------------------------------------------");
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Please select an account type.");
+        //    }
+        //}
+
         private void viewInfoButton_Click(object sender, EventArgs e)
         {
-            // Ensure a customer is selected
             if (currentCustomer == null)
             {
                 MessageBox.Show("Please select a customer.");
                 return;
             }
 
-            // Ensure an account is selected
-            var account = GetSelectedAccount();
-            if (account != null)
-            {
-                // Clear previous info (optional)
-                transactionListBox.Items.Clear();
+            transactionListBox.Items.Clear();
 
-                // Show customer and account info
-                transactionListBox.Items.Add($"--- Account Info ---");
-                transactionListBox.Items.Add($"Customer: {currentCustomer.CustomerName}");
+            if (currentCustomer.Accounts.Count == 0)
+            {
+                transactionListBox.Items.Add($"Customer {currentCustomer.CustomerName} has no accounts.");
+                return;
+            }
+
+            transactionListBox.Items.Add($"--- Account Info for {currentCustomer.CustomerName} ---");
+
+            foreach (var account in currentCustomer.Accounts)
+            {
                 transactionListBox.Items.Add($"Account Type: {account.GetType().Name}");
                 transactionListBox.Items.Add($"Account ID: {account.accountId}");
                 transactionListBox.Items.Add($"Balance: ${account.AccountBalance}");
 
-                // Add more details manually since getAccountInfo() writes to console
-                transactionListBox.Items.Add($"Interest Rate: {account.GetType().GetProperty("interestRate", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.GetValue(account)}");
-                transactionListBox.Items.Add($"Overdraft Limit: {account.GetType().GetProperty("overDraftLimit", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.GetValue(account)}");
-                transactionListBox.Items.Add($"Fee for Failed Transaction: {account.GetType().GetProperty("feeForFailedTransaction", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.GetValue(account)}");
+                // Use reflection to fetch optional properties like interest rate, etc.
+                var interestRate = account.GetType().GetProperty("interestRate", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.GetValue(account);
+                var overdraftLimit = account.GetType().GetProperty("overDraftLimit", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.GetValue(account);
+                var failedFee = account.GetType().GetProperty("feeForFailedTransaction", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.GetValue(account);
+
+                if (interestRate != null)
+                    transactionListBox.Items.Add($"Interest Rate: {interestRate}");
+                if (overdraftLimit != null)
+                    transactionListBox.Items.Add($"Overdraft Limit: {overdraftLimit}");
+                if (failedFee != null)
+                    transactionListBox.Items.Add($"Fee for Failed Transaction: {failedFee}");
 
                 transactionListBox.Items.Add("--------------------------------------------");
             }
-            else
-            {
-                MessageBox.Show("Please select an account type.");
-            }
         }
+
+        private void PopulateAccountTypeComboBoxForCreation()
+        {
+            accountTypeComboBox.Items.Clear();
+            accountTypeComboBox.Items.Add("Everyday Account");
+            accountTypeComboBox.Items.Add("Investment Account");
+            accountTypeComboBox.Items.Add("Omni Account");
+            accountTypeComboBox.SelectedIndex = 0;
+        }
+
 
         //Deposit button
         private void depositButton_Click(object sender, EventArgs e)
@@ -255,6 +307,7 @@ namespace BankAccountManagementApp
             string selectedName = customerComboBox.SelectedItem.ToString();
             currentCustomer = customerController.GetCustomerByName(selectedName);
             PopulateAccountComboBox();
+            PopulateAccountTypeComboBoxForCreation();
         }
 
 
@@ -362,6 +415,17 @@ namespace BankAccountManagementApp
 
             if (currentCustomer?.CustomerID == customer.CustomerID)
                 PopulateAccountComboBox();  // Refresh account list if this is the current customer
+        }
+        //t
+
+        private void customerComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (customerComboBox.SelectedItem == null) return;
+
+            string selectedName = customerComboBox.SelectedItem.ToString();
+            currentCustomer = customerController.GetCustomerByName(selectedName);
+            PopulateAccountComboBox();  // Refresh account list for the selected customer
+            PopulateAccountTypeComboBoxForCreation();
         }
     }
 }
